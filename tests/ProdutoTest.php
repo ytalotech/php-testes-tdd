@@ -8,9 +8,22 @@ class ProdutoTest extends TestCase
 {
     private $produto;
 
+    // Roda antes de cada teste da classe
     public function setUp(): void
     {
         $this->produto = new Produto();
+    }
+
+    // Chamado uma vez, antes dos testes serem executados, no caso pode ser usado para acessar o banco pois executa só uma vez
+    public static function setUpBeforeClass(): void
+    {
+        print __METHOD__;
+    }
+
+    // Chamado uma vez, depois dos testes serem executados, no caso pode ser usado para acessar o banco pois executa só uma vez
+    public static function tearDownAfterClass(): void
+    {
+        print __METHOD__;
     }
 
     public function testSeONomeDoProdutoESetadoCorretamente()
