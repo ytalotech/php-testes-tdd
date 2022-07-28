@@ -27,11 +27,24 @@ class CarrinhoTest extends TestCase
         unset($this->produto);
     }
 
-    public function testSeClasseCarrinhoExiste()
+    // public function testSeClasseCarrinhoExiste()
+    // {
+    //     $classe = class_exists('\\Code\\Carrinho');
+
+    //     $this->assertTrue($classe);
+    // }
+
+    // Se esse teste passar o resto vai ser executado
+    protected function assertPreConditions(): void
     {
         $classe = class_exists('\\Code\\Carrinho');
 
         $this->assertTrue($classe);
+    }
+
+    // Executado sempre depois do teste e o método tearDown...
+    protected function assertPostConditions(): void
+    {
     }
 
     public function testAdicaoDeProdutoNoCarrinho()
