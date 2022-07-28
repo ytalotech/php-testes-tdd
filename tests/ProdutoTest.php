@@ -14,17 +14,17 @@ class ProdutoTest extends TestCase
         $this->produto = new Produto();
     }
 
-    // Chamado uma vez, antes dos testes serem executados, no caso pode ser usado para acessar o banco pois executa só uma vez
-    public static function setUpBeforeClass(): void
-    {
-        print __METHOD__;
-    }
+    // // Chamado uma vez, antes dos testes serem executados, no caso pode ser usado para acessar o banco pois executa só uma vez
+    // public static function setUpBeforeClass(): void
+    // {
+    //     print __METHOD__;
+    // }
 
-    // Chamado uma vez, depois dos testes serem executados, no caso pode ser usado para acessar o banco pois executa só uma vez
-    public static function tearDownAfterClass(): void
-    {
-        print __METHOD__;
-    }
+    // // Chamado uma vez, depois dos testes serem executados, no caso pode ser usado para acessar o banco pois executa só uma vez
+    // public static function tearDownAfterClass(): void
+    // {
+    //     print __METHOD__;
+    // }
 
     public function testSeONomeDoProdutoESetadoCorretamente()
     {
