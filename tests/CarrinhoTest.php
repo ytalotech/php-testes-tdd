@@ -70,13 +70,21 @@ class CarrinhoTest extends TestCase
 
     public function testSeValoresDeProdutosNoCarrinhoEstaoCorretosConformePassado()
     {
-        $produto = $this->produto;
-        $produto->setName('Produto 1');
-        $produto->setPrice(19.99);
-        $produto->setSlug('produto-1');
+        // $produto = $this->produto;
+        // $produto->setName('Produto 1');
+        // $produto->setPrice(19.99);
+        // $produto->setSlug('produto-1');
+
+        // Vamos usar o stub e duble de teste
+        // preciso do namespace Produto::class
+        $produtoStub = $this->createMock(Produto::class);
+        // diz que retornara willReturn
+        $produtoStub->method('getName')->willReturn('Produto 1');
+        $produtoStub->method('getPrice')->willReturn(19.99);
+        $produtoStub->method('getSlug')->willReturn('produto-1');
 
         $carrinho = $this->carrinho;
-        $carrinho->addProduto($produto);
+        $carrinho->addProduto($produtoStub);
 
         $this->assertEquals('Produto 1', $carrinho->getProdutos()[0]->getName());
         $this->assertEquals(19.99, $carrinho->getProdutos()[0]->getPrice());

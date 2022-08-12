@@ -50,7 +50,7 @@ class ProdutoTest extends TestCase
         $this->assertEquals('produto-1', $produto->getSlug(), 'Valores não são iguais');
     }
 
-    /**
+    /*
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessage Parâmetro inválido, informe um slug
      */

@@ -17,8 +17,16 @@ Hoje as empresas utilizam muito o TDD para desenvolver os testes e depois a func
 
 na pasta raz pode ser rodado o comando:
 
+Linux
+
 ```
 bin/phpunit
+```
+
+Windows
+
+```
+php bin/phpunit
 ```
 
 ### Local das classes a serem testadas teste
